@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Nav from "./nav/nav";
+import { Route, Link } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const url = "http://localhost:4000/product";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      productTypeArray: [],
+      filteredProductTypeArray: []
+    };
+  }
+  componentDidMount() {
+    fetch(url)
+      .then(res => res.json())
+      .then(res => {
+        this.setState({ data: res });
+      });
+  }
+  render() {
+    console.log(this.state.data);
+    this.state.data.map(type =>
+      this.state.productTypeArray.push(type.productType)
+    );
+    let filteredProductType = [...new Set(this.state.productTypeArray)];
+    console.log(filteredProductType);
+    return (
+      <div>
+        <div>
+          <Nav data={filteredProductType}></Nav>
+        </div>
+        <main>
+          <Route
+            path={filteredProductType} //need to set component name to equal filteredProducttype name
+            render={routerProps => (
+              <Link
+                data={this.state.filteredProductTypeArray}
+                // {...routerProps}
+                // {...this.state}
+              />
+            )}
+          />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
