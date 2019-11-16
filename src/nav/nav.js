@@ -13,7 +13,7 @@ class Nav extends Component {
       return (
         <ul className='list' key={item}>
           <li>
-            <Link to={item.replace("_", " ")}>{item}</Link>
+            <Link to={item}>{item.replace("_", " ")}</Link>
           </li>{" "}
         </ul>
       );
