@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import Nav from "./nav/nav";
+import Type from "./nav/nav";
 import { Route, Link } from "react-router-dom";
+import Home from "./home/home";
 
 const url = "http://localhost:4000/product";
 
@@ -30,17 +31,25 @@ class App extends React.Component {
     console.log(filteredProductType);
     return (
       <div>
-        <div>
-          <Nav data={filteredProductType}></Nav>
-        </div>
+        <div>{/* <Type data={filteredProductType}></Type> */}</div>
         <main>
+          <Route
+            path='/'
+            render={routerProps => (
+              <Home
+                data={this.state.filteredProductTypeArray}
+                {...routerProps}
+                {...this.state}
+              />
+            )}
+          />
           <Route
             path={filteredProductType} //need to set component name to equal filteredProducttype name
             render={routerProps => (
               <Link
                 data={this.state.filteredProductTypeArray}
-                // {...routerProps}
-                // {...this.state}
+                {...routerProps}
+                {...this.state}
               />
             )}
           />

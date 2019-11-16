@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class Nav extends Component {
+class Type extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      productTypeArray: [],
+      filteredProductTypeArray: []
+    };
   }
 
   render() {
-    console.log(this.props.data);
+    console.log(this.props);
     let list = this.props.data.map(item => {
       return (
         <ul className='list' key={item}>
           <li>
             <Link to={item}>{item.replace("_", " ")}</Link>
+            {/* <Link to={item}>{item.replace("_", " ")}</Link> */}
           </li>{" "}
         </ul>
       );
@@ -22,4 +26,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default Type;
