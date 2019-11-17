@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-const baseurl = "http://localhost:4000/product/type/";
+const baseurl = "http://localhost:4000/product/brand/";
 
-class Type extends Component {
+class Brands extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -58,4 +58,4 @@ class Type extends Component {
   }
 }
 
-export default Type;
+export default Brands;
