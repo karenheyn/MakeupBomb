@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
 
 const baseurl = "http://localhost:4000/product/brand/";
 
@@ -42,7 +43,6 @@ class Brands extends Component {
         <h1>{this.props.match.params.name.replace("_", " ")}</h1>
         {this.state.data.map((item, i) => (
           <div key={item._id}>
-            <h3>{item.brand}</h3>
             <h4>{item.name}</h4>
             <img src={item.imageLink} alt='missing'></img>
             <h3>price: ${item.price}</h3>

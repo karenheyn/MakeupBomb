@@ -1,12 +1,18 @@
 import React, { Component } from "react";
-
+import Lips from "../images/lips.png";
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    return <h1>Home</h1>;
+    return (
+      <div>
+        <h1>Makeup Bomb</h1>
+        <h2>The community-driven makeup website</h2>;
+        <img src={Lips} alt='lips'></img>
+      </div>
+    );
   }
 }
 

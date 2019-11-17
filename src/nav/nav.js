@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Nav, NavItem, NavLink, Col } from "reactstrap";
+
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -7,23 +9,33 @@ class Product extends Component {
   }
   render() {
     return (
-      <nav>
-        <h3>logo</h3>
-        <ul>
+      <Nav>
+        <Col>
           <Link to='/'>
-            <li>Home</li>
+            <NavItem>Logo</NavItem>
           </Link>
+        </Col>
+        <Col>
+          <Link to='/'>
+            <NavItem>Home</NavItem>
+          </Link>
+        </Col>
+        <Col>
           <Link to='/product'>
-            <li>Product type</li>
+            <NavItem>Product</NavItem>
           </Link>
+        </Col>
+        <Col>
           <Link to='/brand'>
-            <li>Brands</li>
+            <NavItem>Brands</NavItem>
           </Link>
+        </Col>
+        <Col>
           <Link to='/about'>
-            <li>About</li>
+            <NavItem>About</NavItem>
           </Link>
-        </ul>
-      </nav>
+        </Col>
+      </Nav>
     );
   }
 }
