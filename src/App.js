@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Home from "./home/home";
-import Type from "./type/type";
+import Type from "./product/type/type";
 import Nav from "./nav/nav";
 import About from "./about/about";
 import Product from "./product/product";
@@ -19,9 +19,10 @@ class App extends React.Component {
         <Nav></Nav>
         <Route path='/' exact component={Home} />
         <Route path='/about' component={About} />
-        <Route path='/brand' component={Brand} />
+        <Route path='/brand' exact component={Brand} />
         <Route path='/product' exact component={Product} />
         <Route path='/product/:name' component={Type} />
+        {/* <Route path='/brand/:name' component={Brand} /> */}
       </div>
     );
   }

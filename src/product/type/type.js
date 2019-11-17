@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "../product/product";
+
 const baseurl = "http://localhost:4000/product/type/";
 
 class Type extends Component {
@@ -7,8 +7,9 @@ class Type extends Component {
     super(props);
     this.state = {
       data: [],
-      description: !this.state.data.description
+      display: false
     };
+    this.toggleDescription = this.toggleDescription.bind(this);
   }
   componentDidMount() {
     const type = this.props.match.params.name;
@@ -19,20 +20,36 @@ class Type extends Component {
         this.setState({ data: res });
       });
   }
-  handleClick() {}
+  toggleDescription() {
+    if (this.state.display === false) {
+      this.setState({ display: true });
+    } else {
+      this.setState({ display: false });
+    }
+  }
   render() {
+    let desc;
+    this.state.data.filter(item => {
+      if (this.state.display === true) {
+        desc = <p>{item.description}</p>;
+      }
+      return desc;
+    });
     console.log(this.props.match);
     console.log(this.state.data);
     return (
       <div>
         <h1>{this.props.match.params.name.replace("_", " ")}</h1>
-        {this.state.data.map(item => (
+        {this.state.data.map((item, i) => (
           <div key={item._id}>
             <h3>{item.brand}</h3>
             <img src={item.imageLink} alt='missing'></img>
             <h3>price: ${item.price}</h3>
-            <button>description</button>
-            <h5>{item.description}</h5>
+            <a href={item.productLink}>Buy</a>
+            <button onClick={this.toggleDescription} value={item.description}>
+              description
+            </button>
+            <div>{desc}</div>
           </div>
         ))}
       </div>
