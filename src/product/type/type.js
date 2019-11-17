@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Description from "../../brand/brands/description";
 const baseurl = "http://localhost:4000/product/type/";
 
 class Type extends Component {
@@ -50,7 +50,7 @@ class Type extends Component {
             <button onClick={this.toggleDescription} value={item.description}>
               description
             </button>
-            <div>{desc}</div>
+            <Description data={item} display={this.state.display}></Description>
           </div>
         ))}
       </div>

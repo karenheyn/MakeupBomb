@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
-
+import Description from "./description";
 const baseurl = "http://localhost:4000/product/brand/";
 
 class Brands extends Component {
@@ -25,24 +25,25 @@ class Brands extends Component {
   toggleDescription() {
     if (this.state.display === false) {
       this.setState({ display: true });
+      return <Description></Description>;
     } else {
       this.setState({ display: false });
     }
   }
   render() {
-    let desc;
-    this.state.data.filter(item => {
-      if (this.state.display === true) {
-        desc = <p>{item.description}</p>;
-      }
-      return desc;
-    });
+    // let desc;
+    // this.state.data.filter(item => {
+    //   if (this.state.display === true) {
+    //     desc = <p>{item.description}</p>;
+    //   }
+    //   return desc;
+    // });
 
     console.log(this.state.data);
     return (
       <div>
         <h1>{this.props.match.params.name.replace("_", " ")}</h1>
-        {this.state.data.map((item, i) => (
+        {this.state.data.map(item => (
           <div key={item._id}>
             <h4>{item.name}</h4>
             <img src={item.imageLink} alt='missing'></img>
@@ -51,7 +52,13 @@ class Brands extends Component {
             <button onClick={this.toggleDescription} value={item.description}>
               description
             </button>
-            <div>{item.description}</div>
+            <div>
+              <Description
+                data={item}
+                display={this.state.display}
+              ></Description>
+            </div>
+            {/* <div>{item.description}</div> */}
           </div>
         ))}
       </div>
