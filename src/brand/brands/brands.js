@@ -8,6 +8,7 @@ class Brands extends Component {
     super(props);
     this.state = {
       data: [],
+
       display: false
     };
     this.toggleDescription = this.toggleDescription.bind(this);
@@ -36,7 +37,7 @@ class Brands extends Component {
       }
       return desc;
     });
-    console.log(this.props.match);
+
     console.log(this.state.data);
     return (
       <div>
@@ -50,7 +51,7 @@ class Brands extends Component {
             <button onClick={this.toggleDescription} value={item.description}>
               description
             </button>
-            <div>{desc}</div>
+            <div>{item.description}</div>
           </div>
         ))}
       </div>
