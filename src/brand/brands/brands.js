@@ -25,20 +25,11 @@ class Brands extends Component {
   toggleDescription() {
     if (this.state.display === false) {
       this.setState({ display: true });
-      return <Description></Description>;
     } else {
       this.setState({ display: false });
     }
   }
   render() {
-    // let desc;
-    // this.state.data.filter(item => {
-    //   if (this.state.display === true) {
-    //     desc = <p>{item.description}</p>;
-    //   }
-    //   return desc;
-    // });
-
     console.log(this.state.data);
     return (
       <div>
@@ -58,7 +49,6 @@ class Brands extends Component {
                 display={this.state.display}
               ></Description>
             </div>
-            {/* <div>{item.description}</div> */}
           </div>
         ))}
       </div>

@@ -28,13 +28,6 @@ class Type extends Component {
     }
   }
   render() {
-    let desc;
-    this.state.data.filter(item => {
-      if (this.state.display === true) {
-        desc = <p>{item.description}</p>;
-      }
-      return desc;
-    });
     console.log(this.props.match);
     console.log(this.state.data);
     return (
