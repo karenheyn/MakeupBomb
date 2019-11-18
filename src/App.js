@@ -8,6 +8,7 @@ import Product from "./product/product";
 import Brand from "./brand/brand";
 import { Route, Link } from "react-router-dom";
 import Brands from "./brand/brands/brands";
+import Add from "./add/add";
 
 class App extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <Route path='/product' exact component={Product} />
         <Route path='/product/:name' component={Type} />
         <Route path='/brand/:name' component={Brands} />
+        <Route path='/add' component={Add} />
       </div>
     );
   }

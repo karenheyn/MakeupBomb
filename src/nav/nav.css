@@ -1,0 +1,11 @@
+.nav {
+    background-color: #64090e;
+    height: 60px;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+
+}
+
+.nav-item {
+    color: white;
+}
