@@ -20,7 +20,6 @@ class Product extends Component {
       });
   }
   render() {
-    // console.log(this.state.data);
     this.state.data.map(type =>
       this.state.productTypeArray.push(type.productType)
     );
