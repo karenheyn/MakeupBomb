@@ -1,6 +1,6 @@
 .nav {
     background-color: #64090e;
-    height: 60px;
+    min-height: 60px;
     font-family: 'Raleway', sans-serif;
     align-items: center;
 

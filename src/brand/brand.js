@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
+import "../brand/brand.css";
 import { Route, Link } from "react-router-dom";
-const url = "http://localhost:4000/product";
+const url = "https://makeupinfo.herokuapp.com/product";
 
 class Brand extends Component {
   constructor(props) {
@@ -24,10 +24,12 @@ class Brand extends Component {
     this.state.data.map(item => this.state.productBrandArray.push(item.brand));
     let filteredProductBrand = [...new Set(this.state.productBrandArray)];
     return (
-      <div>
+      <div className='links'>
         {filteredProductBrand.map(item => (
           <h1 key={item}>
-            <Link to={`/brand/${item}`}>{item}</Link>
+            <Link to={`/brand/${item}`} className='item'>
+              {item}
+            </Link>
           </h1>
         ))}
       </div>

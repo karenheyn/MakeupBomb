@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "../../node_modules/axios";
 
-class Add extends Component {
+class Update extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,7 +25,10 @@ class Add extends Component {
     evt.preventDefault();
     console.log(this.state);
     axios
-      .post("https://makeupinfo.herokuapp.com/product", this.state)
+      .put(
+        `https://makeupinfo.herokuapp.com/product${this.state._id}`,
+        this.state
+      )
       .then(res => {
         console.log(res);
       })
@@ -47,7 +50,7 @@ class Add extends Component {
     } = this.state;
     return (
       <div>
-        <h2 className='links'>Add a product to the collection</h2>
+        <h2 className='links'>Search by ID and update</h2>
         <form onSubmit={this.onSubmit}>
           <br></br>
           <input
@@ -122,4 +125,4 @@ class Add extends Component {
     );
   }
 }
-export default Add;
+export default Update;

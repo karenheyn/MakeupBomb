@@ -1,0 +1,20 @@
+.card {
+    max-width: 60vw;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.item-container {
+    text-align: center;
+}
+
+.head {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+}
+
+#abutton {
+    background-color: rgb(133, 27, 64);
+    border-color: maroon
+}

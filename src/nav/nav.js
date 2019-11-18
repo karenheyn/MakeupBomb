@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, NavItem, NavLink, Col } from "reactstrap";
 import "./nav.css";
-
+import Mouth from "../images/mouth.svg";
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,9 @@ class Product extends Component {
       <Nav className='nav'>
         <Col>
           <Link to='/'>
-            <NavItem className='nav-item'>Logo</NavItem>
+            <NavItem className='nav-item'>
+              <img src={Mouth} alt='icon'></img>
+            </NavItem>
           </Link>
         </Col>
         <Col>
@@ -34,6 +36,16 @@ class Product extends Component {
         <Col>
           <Link to='/add'>
             <NavItem className='nav-item'>Add</NavItem>
+          </Link>
+        </Col>
+        <Col>
+          <Link to='/update'>
+            <NavItem className='nav-item'>Update</NavItem>
+          </Link>
+        </Col>
+        <Col>
+          <Link to='/remove'>
+            <NavItem className='nav-item'>Remove</NavItem>
           </Link>
         </Col>
         <Col>

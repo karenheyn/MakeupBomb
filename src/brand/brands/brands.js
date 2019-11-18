@@ -1,7 +1,15 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+import {
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
 import Description from "./description";
-const baseurl = "http://localhost:4000/product/brand/";
+import "./brands.css";
+const baseurl = "https://makeupinfo.herokuapp.com/product/brand/";
 
 class Brands extends Component {
   constructor(props) {
@@ -32,24 +40,38 @@ class Brands extends Component {
   render() {
     console.log(this.state.data);
     return (
-      <div>
-        <h1>{this.props.match.params.name.replace("_", " ")}</h1>
+      <div className='item-container'>
+        <h1 className='head'>
+          {this.props.match.params.name.replace("_", " ")}
+        </h1>
         {this.state.data.map(item => (
-          <div key={item._id}>
-            <h4>{item.name}</h4>
-            <img src={item.imageLink} alt='missing'></img>
-            <h3>price: ${item.price}</h3>
-            <a href={item.productLink}>Buy</a>
-            <button onClick={this.toggleDescription} value={item.description}>
-              description
-            </button>
-            <div>
-              <Description
-                data={item}
-                display={this.state.display}
-              ></Description>
-            </div>
-          </div>
+          <Card key={item._id} className='card'>
+            <CardImg src={item.imageLink} alt='missing image'></CardImg>
+            <CardBody>
+              <CardTitle>
+                {item.name}
+                <span> {item._id}</span>
+              </CardTitle>
+              <CardSubtitle>price: ${item.price}</CardSubtitle>
+              <CardSubtitle>
+                <a href={item.productLink}>Buy</a>
+              </CardSubtitle>
+              <br></br>
+              <Button
+                id='abutton'
+                onClick={this.toggleDescription}
+                value={item.description}
+              >
+                description
+              </Button>
+              <div>
+                <Description
+                  data={item}
+                  display={this.state.display}
+                ></Description>
+              </div>
+            </CardBody>
+          </Card>
         ))}
       </div>
     );

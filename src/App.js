@@ -9,6 +9,8 @@ import Brand from "./brand/brand";
 import { Route, Link } from "react-router-dom";
 import Brands from "./brand/brands/brands";
 import Add from "./add/add";
+import Update from "./update/update";
+import Delete from "./Delete/delete";
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +28,8 @@ class App extends React.Component {
         <Route path='/product/:name' component={Type} />
         <Route path='/brand/:name' component={Brands} />
         <Route path='/add' component={Add} />
+        <Route path='/update' component={Update} />
+        <Route path='/remove' component={Delete} />
       </div>
     );
   }

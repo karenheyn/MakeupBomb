@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
+import "./product.css";
 import { Route, Link } from "react-router-dom";
-const url = "http://localhost:4000/product";
+const url = "https://makeupinfo.herokuapp.com/product";
 
 class Product extends Component {
   constructor(props) {
@@ -26,10 +26,12 @@ class Product extends Component {
     );
     let filteredProductType = [...new Set(this.state.productTypeArray)];
     return (
-      <div>
+      <div className='links'>
         {filteredProductType.map(item => (
           <h1 key={item}>
-            <Link to={`/product/${item}`}>{item.replace("_", " ")}</Link>
+            <Link to={`/product/${item}`} className='item'>
+              {item.replace("_", " ")}
+            </Link>
           </h1>
         ))}
       </div>
