@@ -17,7 +17,7 @@ class Home extends Component {
         <h1 className='title'>
           Makeup <span className='bomb'>Bomb</span>
         </h1>
-        <h2 className='subhead'>The community-driven makeup website</h2>;
+        <h2 className='subhead'>The community-driven makeup website</h2>
         <div className='grid-container'>
           <div className='grid-item'>
             <img className='lips' src={Lips} alt='lips'></img>
