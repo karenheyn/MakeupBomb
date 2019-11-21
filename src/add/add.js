@@ -51,7 +51,7 @@ class Add extends Component {
         <form onSubmit={this.onSubmit}>
           <br></br>
           <input
-            class='form-control'
+            className='form-control'
             name='_id'
             type='text'
             placeholder='Product ID'
