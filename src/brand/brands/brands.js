@@ -16,7 +16,6 @@ class Brands extends Component {
     super(props);
     this.state = {
       data: [],
-
       display: false
     };
     this.toggleDescription = this.toggleDescription.bind(this);
