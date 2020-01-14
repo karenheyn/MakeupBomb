@@ -37,8 +37,6 @@ class Type extends Component {
     }
   }
   render() {
-    console.log(this.props.match);
-    console.log(this.state.data);
     return (
       <div className='item-container'>
         <h1 className='head'>

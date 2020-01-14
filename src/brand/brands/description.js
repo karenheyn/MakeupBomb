@@ -6,7 +6,6 @@ class Description extends Component {
     this.state = {};
   }
   render() {
-    console.log(this.props.display);
     if (this.props.display) {
       return <p>{this.props.data.description}</p>;
     } else {
