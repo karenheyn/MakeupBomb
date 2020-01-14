@@ -19,7 +19,7 @@ This purpose of this application is to provide makeup information about multiple
 
 The next step for this project is to add the ability to leave comments on each product by adding additional backend functionality.
 
-Technologies Used
+## Technologies Used
 
 - mongoose
 - express
