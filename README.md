@@ -2,7 +2,7 @@
 
 This full-stack MERN application is a place for makeup lovers to share information about products. This application has full CRUD capabiity. Users can add / view / edit / and delete products through the interface.
 
-![application picture](./images/makeup_bomb.png)
+![application picture](./src/images/makeup_bomb.png)
 
 ## Installation
 
