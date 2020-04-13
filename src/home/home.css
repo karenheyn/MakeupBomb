@@ -1,5 +1,4 @@
 .grid-item {
-    padding: 20px;
     font-size: 30px;
     text-align: center;
     height: min-content;
@@ -7,17 +6,24 @@
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
+    width: 80%;
+    height: 20%;
+    position: relative;
 
 }
 
-.lips {
-    max-width: 100%;
-    height: 35vh;
+.grid-container .image-div {
+    width: 100%;
+    height: 300px;
     overflow: hidden;
-    border-radius: 40px;
+}
+
+.image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    padding: 15px 0;
 }
 
 .bomb {
