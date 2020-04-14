@@ -17,7 +17,7 @@ class Update extends Component {
       productType: "",
     };
     this.handleChange = this.handleChange.bind();
-    this.onSubmit = this.onSubmit.bind();
+    this.handleUpdate = this.handleUpdate.bind();
   }
   handleChange = (e) => {
     e.preventDefault();
@@ -26,7 +26,7 @@ class Update extends Component {
     console.log(this.state);
   };
 
-  onSubmit = (evt) => {
+  handleUpdate = (evt) => {
     evt.preventDefault();
     console.log(this.state);
     axios
@@ -43,6 +43,7 @@ class Update extends Component {
   };
 
   render() {
+    console.log(this.props);
     const info = [
       { name: "_id", placeholder: "product ID" },
       { name: "brand", placeholder: "brand" },
@@ -70,6 +71,19 @@ class Update extends Component {
       <div>
         <h2 className='links'>Search by ID and update</h2>
         <div className='form-container'> {dataArray}</div>
+        <button type='button' className='btn btn-outline-primary'>
+          Add Item
+        </button>
+        <button type='button' className='btn btn-outline-success'>
+          Update Item
+        </button>
+        <button
+          type='button'
+          className='btn btn-outline-danger'
+          onClick={this.handleUpdate}
+        >
+          Delete Item
+        </button>
       </div>
     );
   }
