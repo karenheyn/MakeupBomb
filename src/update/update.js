@@ -19,8 +19,11 @@ class Update extends Component {
     this.handleChange = this.handleChange.bind();
     this.onSubmit = this.onSubmit.bind();
   }
-  handleChange = (evt) => {
-    this.setState({ [evt.target.name]: evt.target.value });
+  handleChange = (e) => {
+    e.preventDefault();
+    console.log("poop");
+    this.setState({ [e.target.name]: e.target.value });
+    console.log(this.state);
   };
 
   onSubmit = (evt) => {
@@ -40,37 +43,33 @@ class Update extends Component {
   };
 
   render() {
-    const {
-      _id,
-      brand,
-      name,
-      price,
-      imageLink,
-      productLink,
-      productCategory,
-      productType,
-    } = this.state;
     const info = [
-      { name: "_id", placeholder: "product ID", value: _id },
-      { name: "brand", placeholder: "brand", value: brand },
-      { name: "name", placeholder: "product name", value: name },
-      { name: "price", placeholder: "price", value: price },
-      { name: "image-link", placeholder: "image link", value: imageLink },
-      { name: "product-link", placeholder: "product link", value: productLink },
+      { name: "_id", placeholder: "product ID" },
+      { name: "brand", placeholder: "brand" },
+      { name: "name", placeholder: "product name" },
+      { name: "price", placeholder: "price" },
+      { name: "image-link", placeholder: "image link" },
+      { name: "product-link", placeholder: "product link" },
       {
         name: "product category",
         placeholder: "product category",
-        value: productCategory,
       },
-      { name: "product type", placeholder: "product type", value: productType },
+      { name: "product type", placeholder: "product type" },
     ];
 
+    const dataArray = info.map((item) => (
+      <Input
+        name={item.name}
+        placeholder={item.placeholder}
+        key={item.name}
+        onChange={this.handleChange}
+        value={this.state[item.name]}
+      ></Input>
+    ));
     return (
       <div>
         <h2 className='links'>Search by ID and update</h2>
-        <div className='form-container'>
-          <Input props={info}></Input>
-        </div>
+        <div className='form-container'>{dataArray}</div>
       </div>
     );
   }

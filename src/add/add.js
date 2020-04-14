@@ -12,24 +12,24 @@ class Add extends Component {
       imageLink: "",
       productLink: "",
       category: "",
-      productType: ""
+      productType: "",
     };
     this.handleChange = this.handleChange.bind();
     this.onSubmit = this.onSubmit.bind();
   }
-  handleChange = evt => {
+  handleChange = (evt) => {
     this.setState({ [evt.target.name]: evt.target.value });
   };
 
-  onSubmit = evt => {
+  onSubmit = (evt) => {
     evt.preventDefault();
     console.log(this.state);
     axios
       .post("https://makeupinfo.herokuapp.com/product", this.state)
-      .then(res => {
+      .then((res) => {
         console.log(res);
       })
-      .then(err => {
+      .then((err) => {
         console.log(err);
       });
   };
@@ -43,7 +43,7 @@ class Add extends Component {
       imageLink,
       productLink,
       productCategory,
-      productType
+      productType,
     } = this.state;
     return (
       <div>
@@ -59,7 +59,7 @@ class Add extends Component {
             onChange={this.handleChange}
           />
           <input
-            class='form-control'
+            className='form-control'
             name='brand'
             type='text'
             placeholder='Brand'
@@ -67,7 +67,7 @@ class Add extends Component {
             onChange={this.handleChange}
           />
           <input
-            class='form-control'
+            className='form-control'
             name='name'
             type='text'
             placeholder='Product Name'
@@ -75,7 +75,7 @@ class Add extends Component {
             onChange={this.handleChange}
           />
           <input
-            class='form-control'
+            className='form-control'
             name='price'
             type='text'
             placeholder='Price'
@@ -83,7 +83,7 @@ class Add extends Component {
             onChange={this.handleChange}
           />
           <input
-            class='form-control'
+            className='form-control'
             name='imageLink'
             type='text'
             placeholder='Image Link'
@@ -91,7 +91,7 @@ class Add extends Component {
             onChange={this.handleChange}
           />
           <input
-            class='form-control'
+            className='form-control'
             name='productLink'
             type='text'
             placeholder='Product Link'
@@ -99,7 +99,7 @@ class Add extends Component {
             onChange={this.handleChange}
           />
           <input
-            class='form-control'
+            className='form-control'
             name='productCategory'
             type='text'
             placeholder='Product Category'
@@ -107,7 +107,7 @@ class Add extends Component {
             onChange={this.handleChange}
           />
           <input
-            class='form-control'
+            className='form-control'
             name='productType'
             type='text'
             placeholder='Product Type'

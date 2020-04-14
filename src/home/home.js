@@ -19,27 +19,27 @@ class Home extends Component {
         </h1>
         <h2 className='subhead'>The community-driven makeup website</h2>
         <div className='grid-container'>
-          <div class='row'>
-            <div class='col-sm-7 image-div'>
+          <div className='row'>
+            <div className='col-sm-7 image-div'>
               <img className='lips' src={Lips} alt='lips'></img>
             </div>
-            <div class='col-sm-5 image-div'>
+            <div className='col-sm-5 image-div'>
               <img className='lips' src={Assorted} alt='lips'></img>
             </div>
           </div>
-          <div class='row'>
-            <div class='col-sm-5 image-div'>
+          <div className='row'>
+            <div className='col-sm-5 image-div'>
               <img className='lips' src={Gold} alt='lips'></img>
             </div>
-            <div class='col-sm-7 image-div'>
+            <div className='col-sm-7 image-div'>
               <img className='lips' src={Shadow} alt='lips'></img>
             </div>
           </div>
-          <div class='row'>
-            <div class='col-sm-7 image-div'>
+          <div className='row'>
+            <div className='col-sm-7 image-div'>
               <img className='lips' src={Red} alt='lips'></img>{" "}
             </div>
-            <div class='col-sm-5 image-div'>
+            <div className='col-sm-5 image-div'>
               <img className='lips' src={Brushes} alt='lips'></img>
             </div>
           </div>
