@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "../../node_modules/axios";
-
+import Input from "./input";
 class Update extends Component {
   constructor(props) {
     super(props);
@@ -12,16 +12,16 @@ class Update extends Component {
       imageLink: "",
       productLink: "",
       category: "",
-      productType: ""
+      productType: "",
     };
     this.handleChange = this.handleChange.bind();
     this.onSubmit = this.onSubmit.bind();
   }
-  handleChange = evt => {
+  handleChange = (evt) => {
     this.setState({ [evt.target.name]: evt.target.value });
   };
 
-  onSubmit = evt => {
+  onSubmit = (evt) => {
     evt.preventDefault();
     console.log(this.state);
     axios
@@ -29,10 +29,10 @@ class Update extends Component {
         `https://makeupinfo.herokuapp.com/product${this.state._id}`,
         this.state
       )
-      .then(res => {
+      .then((res) => {
         console.log(res);
       })
-      .then(err => {
+      .then((err) => {
         console.log(err);
       });
   };
@@ -46,12 +46,13 @@ class Update extends Component {
       imageLink,
       productLink,
       productCategory,
-      productType
+      productType,
     } = this.state;
     return (
       <div>
         <h2 className='links'>Search by ID and update</h2>
-        <form onSubmit={this.onSubmit}>
+        <Input />
+        {/* <form onSubmit={this.onSubmit}>
           <br></br>
           <input
             class='form-control'
@@ -120,7 +121,7 @@ class Update extends Component {
           <div className='btn' id='btn'>
             <input type='submit' value='Submit' className='btn btn-secondary' />
           </div>
-        </form>
+        </form> */}
       </div>
     );
   }
