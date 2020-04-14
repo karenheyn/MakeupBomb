@@ -6,7 +6,6 @@ import Shadow from "../images/shadowblue.jpg";
 import Red from "../images/redhead.jpg";
 import Brushes from "../images/brushes.jpg";
 import "./home.css";
-const url = "https://makeupinfo.herokuapp.com";
 
 class Home extends Component {
   constructor(props) {
@@ -15,14 +14,7 @@ class Home extends Component {
       data: [],
     };
   }
-  componentDidMount() {
-    fetch(url)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        this.setState({ data: res });
-      });
-  }
+
   render() {
     return (
       <div className='page'>

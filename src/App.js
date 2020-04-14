@@ -11,11 +11,19 @@ import Brands from "./brand/brands/brands";
 import Add from "./add/add";
 import Update from "./update/update";
 import Delete from "./Delete/delete";
+const url = "https://makeupinfo.herokuapp.com";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+  componentDidMount() {
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({ data: res });
+      });
   }
   render() {
     return (
