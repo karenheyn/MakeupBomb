@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "../../node_modules/axios";
 import Input from "./input";
+import "./update.css";
+
 class Update extends Component {
   constructor(props) {
     super(props);
@@ -48,80 +50,27 @@ class Update extends Component {
       productCategory,
       productType,
     } = this.state;
+    const info = [
+      { name: "_id", placeholder: "product ID", value: _id },
+      { name: "brand", placeholder: "brand", value: brand },
+      { name: "name", placeholder: "product name", value: name },
+      { name: "price", placeholder: "price", value: price },
+      { name: "image-link", placeholder: "image link", value: imageLink },
+      { name: "product-link", placeholder: "product link", value: productLink },
+      {
+        name: "product category",
+        placeholder: "product category",
+        value: productCategory,
+      },
+      { name: "product type", placeholder: "product type", value: productType },
+    ];
+
     return (
       <div>
         <h2 className='links'>Search by ID and update</h2>
-        <Input />
-        {/* <form onSubmit={this.onSubmit}>
-          <br></br>
-          <input
-            class='form-control'
-            name='_id'
-            type='text'
-            placeholder='Product ID'
-            value={_id}
-            onChange={this.handleChange}
-          />
-          <input
-            class='form-control'
-            name='brand'
-            type='text'
-            placeholder='Brand'
-            value={brand}
-            onChange={this.handleChange}
-          />
-          <input
-            class='form-control'
-            name='name'
-            type='text'
-            placeholder='Product Name'
-            value={name}
-            onChange={this.handleChange}
-          />
-          <input
-            class='form-control'
-            name='price'
-            type='text'
-            placeholder='Price'
-            value={price}
-            onChange={this.handleChange}
-          />
-          <input
-            class='form-control'
-            name='imageLink'
-            type='text'
-            placeholder='Image Link'
-            value={imageLink}
-            onChange={this.handleChange}
-          />
-          <input
-            class='form-control'
-            name='productLink'
-            type='text'
-            placeholder='Product Link'
-            value={productLink}
-            onChange={this.handleChange}
-          />
-          <input
-            class='form-control'
-            name='productCategory'
-            type='text'
-            placeholder='Product Category'
-            value={productCategory}
-            onChange={this.handleChange}
-          />
-          <input
-            class='form-control'
-            name='productType'
-            type='text'
-            placeholder='Product Type'
-            value={productType}
-            onChange={this.handleChange}
-          />
-          <div className='btn' id='btn'>
-            <input type='submit' value='Submit' className='btn btn-secondary' />
-          </div>
-        </form> */}
+        <div className='form-container'>
+          <Input props={info}></Input>
+        </div>
       </div>
     );
   }
