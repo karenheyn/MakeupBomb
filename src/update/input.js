@@ -24,7 +24,7 @@ class Input extends React.Component {
           name={this.props.name}
           type='text'
           placeholder={this.props.placeholder}
-          onChange={this.handleChange}
+          onChange={this.props.onChange}
           key={this.props.name}
         />
       </div>

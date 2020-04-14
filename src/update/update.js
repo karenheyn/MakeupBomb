@@ -69,7 +69,7 @@ class Update extends Component {
     return (
       <div>
         <h2 className='links'>Search by ID and update</h2>
-        <div className='form-container'>{dataArray}</div>
+        <div className='form-container'> {dataArray}</div>
       </div>
     );
   }
