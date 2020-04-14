@@ -20,7 +20,7 @@ class Input extends React.Component {
         name='_id'
         type='text'
         placeholder={item.placeholder}
-        value={item._id}
+        value={this.state.value}
         onChange={this.handleChange}
         key={item.name}
       />
