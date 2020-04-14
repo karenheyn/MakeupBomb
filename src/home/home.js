@@ -48,26 +48,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        {/* <div className='grid-container'>
-          <div className='grid-item'>
-            <img className='lips' src={Lips} alt='lips'></img>
-          </div>
-          <div className='grid-item'>
-            <img className='lips' src={Assorted} alt='lips'></img>
-          </div>
-          <div className='grid-item'>
-            <img className='lips' src={Gold} alt='lips'></img>
-          </div>
-          <div className='grid-item'>
-            <img className='lips' src={Shadow} alt='lips'></img>
-          </div>
-          <div className='grid-item'>
-            <img className='lips' src={Red} alt='lips'></img>
-          </div>
-          <div className='grid-item'>
-            <img className='lips' src={Brushes} alt='lips'></img>
-          </div>
-        </div> */}
       </div>
     );
   }

@@ -13,9 +13,9 @@ class Product extends Component {
       <Nav className='nav'>
         <Col>
           <Link to='/'>
-            <NavItem className='nav-item'>
+            {/* <NavItem className='nav-item'>
               <img src={Mouth} alt='icon'></img>
-            </NavItem>
+            </NavItem> */}
           </Link>
         </Col>
         <Col>
