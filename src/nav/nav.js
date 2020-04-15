@@ -11,18 +11,13 @@ class Product extends Component {
   render() {
     return (
       <Nav className='nav'>
-        <Col>
+        {/* <Col>
           <Link to='/'>
-            {/* <NavItem className='nav-item'>
+            <NavItem className='nav-item'>
               <img src={Mouth} alt='icon'></img>
-            </NavItem> */}
+            </NavItem>
           </Link>
-        </Col>
-        <Col>
-          <Link to='/'>
-            <NavItem className='nav-item'>Home</NavItem>
-          </Link>
-        </Col>
+        </Col> */}
         <Col>
           <Link to='/product'>
             <NavItem className='nav-item'>Product</NavItem>
@@ -34,18 +29,17 @@ class Product extends Component {
           </Link>
         </Col>
         <Col>
-          <Link to='/add'>
-            <NavItem className='nav-item'>Add</NavItem>
+          <Link to='/'>
+            <NavItem className='nav-item'>
+              <h1 className='title'>
+                Makeup <span className='bomb'>Bomb</span>
+              </h1>
+            </NavItem>
           </Link>
         </Col>
         <Col>
           <Link to='/update'>
             <NavItem className='nav-item'>Update</NavItem>
-          </Link>
-        </Col>
-        <Col>
-          <Link to='/remove'>
-            <NavItem className='nav-item'>Remove</NavItem>
           </Link>
         </Col>
         <Col>

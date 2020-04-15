@@ -29,9 +29,7 @@ class App extends React.Component {
         <Route path='/product' exact component={Product} />
         <Route path='/product/:name' component={Type} />
         <Route path='/brand/:name' component={Brands} />
-        <Route path='/add' component={Add} />
         <Route path='/update' component={Update} />
-        <Route path='/remove' component={Delete} />
       </div>
     );
   }

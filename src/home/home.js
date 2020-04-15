@@ -18,10 +18,10 @@ class Home extends Component {
   render() {
     return (
       <div className='page'>
-        <h1 className='title'>
+        {/* <h1 className='title'>
           Makeup <span className='bomb'>Bomb</span>
         </h1>
-        <h2 className='subhead'>The community-driven makeup website</h2>
+        <h2 className='subhead'>The community-driven makeup website</h2> */}
         <div className='grid-container'>
           <div className='row'>
             <div className='col-sm-7 image-div'>
