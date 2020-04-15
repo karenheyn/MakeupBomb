@@ -1,3 +1,11 @@
 .form-container {
     max-width: 260px;
 }
+
+.button-container {
+    margin: 0 auto;
+    text-align: center;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -101,27 +101,29 @@ class Update extends Component {
       <div>
         <h2 className='links'>Search by ID and update</h2>
         <div className='form-container'> {dataArray}</div>
-        <button
-          type='button'
-          className='btn btn-outline-primary'
-          onClick={this.handleAdd}
-        >
-          Add Item
-        </button>
-        <button
-          type='button'
-          className='btn btn-outline-success'
-          onClick={this.handleUpdate}
-        >
-          Update Item
-        </button>
-        <button
-          type='button'
-          className='btn btn-outline-danger'
-          onClick={this.handleDelete}
-        >
-          Delete Item
-        </button>
+        <div className='button-container'>
+          <button
+            type='button'
+            className='btn btn-outline-primary'
+            onClick={this.handleAdd}
+          >
+            Add Item
+          </button>
+          <button
+            type='button'
+            className='btn btn-outline-success'
+            onClick={this.handleUpdate}
+          >
+            Update Item
+          </button>
+          <button
+            type='button'
+            className='btn btn-outline-danger'
+            onClick={this.handleDelete}
+          >
+            Delete Item
+          </button>
+        </div>
       </div>
     );
   }
