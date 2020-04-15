@@ -13,12 +13,13 @@ class Update extends Component {
       price: "",
       imageLink: "",
       productLink: "",
-      category: "",
+      productCategory: "",
       productType: "",
     };
     this.handleChange = this.handleChange.bind();
     this.handleUpdate = this.handleUpdate.bind();
   }
+
   handleChange = (e) => {
     e.preventDefault();
     console.log("poop");
@@ -31,7 +32,7 @@ class Update extends Component {
     console.log(this.state);
     axios
       .put(
-        `https://makeupinfo.herokuapp.com/product${this.state._id}`,
+        `https://makeupinfo.herokuapp.com/product/${this.state._id}`,
         this.state
       )
       .then((res) => {
@@ -49,13 +50,13 @@ class Update extends Component {
       { name: "brand", placeholder: "brand" },
       { name: "name", placeholder: "product name" },
       { name: "price", placeholder: "price" },
-      { name: "image-link", placeholder: "image link" },
-      { name: "product-link", placeholder: "product link" },
+      { name: "imageLink", placeholder: "image link" },
+      { name: "productLink", placeholder: "product link" },
       {
-        name: "product category",
+        name: "productCategory",
         placeholder: "product category",
       },
-      { name: "product type", placeholder: "product type" },
+      { name: "productType", placeholder: "product type" },
     ];
 
     const dataArray = info.map((item) => (
@@ -74,14 +75,14 @@ class Update extends Component {
         <button type='button' className='btn btn-outline-primary'>
           Add Item
         </button>
-        <button type='button' className='btn btn-outline-success'>
-          Update Item
-        </button>
         <button
           type='button'
-          className='btn btn-outline-danger'
+          className='btn btn-outline-success'
           onClick={this.handleUpdate}
         >
+          Update Item
+        </button>
+        <button type='button' className='btn btn-outline-danger'>
           Delete Item
         </button>
       </div>

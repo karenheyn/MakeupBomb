@@ -18,13 +18,7 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
-  componentDidMount() {
-    fetch(url)
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({ data: res });
-      });
-  }
+
   render() {
     return (
       <div>
