@@ -18,6 +18,7 @@ class Update extends Component {
     };
     this.handleChange = this.handleChange.bind();
     this.handleUpdate = this.handleUpdate.bind();
+    this.handleAdd = this.handleAdd.bind();
   }
 
   handleChange = (e) => {
@@ -25,6 +26,18 @@ class Update extends Component {
     console.log("poop");
     this.setState({ [e.target.name]: e.target.value });
     console.log(this.state);
+  };
+  handleAdd = (evt) => {
+    evt.preventDefault();
+    console.log(this.state);
+    axios
+      .post("https://makeupinfo.herokuapp.com/product", this.state)
+      .then((res) => {
+        console.log(res);
+      })
+      .then((err) => {
+        console.log(err);
+      });
   };
 
   handleUpdate = (evt) => {
@@ -36,7 +49,7 @@ class Update extends Component {
         this.state
       )
       .then((res) => {
-        console.log(res);
+        console.log(res, "success");
       })
       .then((err) => {
         console.log(err);
@@ -72,7 +85,11 @@ class Update extends Component {
       <div>
         <h2 className='links'>Search by ID and update</h2>
         <div className='form-container'> {dataArray}</div>
-        <button type='button' className='btn btn-outline-primary'>
+        <button
+          type='button'
+          className='btn btn-outline-primary'
+          onClick={this.handleAdd}
+        >
           Add Item
         </button>
         <button
