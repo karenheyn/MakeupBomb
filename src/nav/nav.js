@@ -11,13 +11,6 @@ class Product extends Component {
   render() {
     return (
       <Nav className='nav'>
-        {/* <Col>
-          <Link to='/'>
-            <NavItem className='nav-item'>
-              <img src={Mouth} alt='icon'></img>
-            </NavItem>
-          </Link>
-        </Col> */}
         <Col>
           <Link to='/product'>
             <NavItem className='nav-item'>Product</NavItem>
@@ -28,7 +21,7 @@ class Product extends Component {
             <NavItem className='nav-item'>Brands</NavItem>
           </Link>
         </Col>
-        <Col>
+        <Col id='nav-col'>
           <Link to='/'>
             <NavItem className='nav-item nav-title'>
               <h1 className='title'>

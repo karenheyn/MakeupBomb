@@ -6,12 +6,9 @@ import Nav from "./nav/nav";
 import About from "./about/about";
 import Product from "./product/product";
 import Brand from "./brand/brand";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Brands from "./brand/brands/brands";
-import Add from "./add/add";
 import Update from "./update/update";
-import Delete from "./Delete/delete";
-const url = "https://makeupinfo.herokuapp.com";
 
 class App extends React.Component {
   constructor(props) {
