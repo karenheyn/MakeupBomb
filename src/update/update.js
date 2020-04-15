@@ -19,6 +19,7 @@ class Update extends Component {
     this.handleChange = this.handleChange.bind();
     this.handleUpdate = this.handleUpdate.bind();
     this.handleAdd = this.handleAdd.bind();
+    this.handleDelete = this.handleDelete.bind();
   }
 
   handleChange = (e) => {
@@ -26,6 +27,21 @@ class Update extends Component {
     console.log("poop");
     this.setState({ [e.target.name]: e.target.value });
     console.log(this.state);
+  };
+  handleDelete = (evt) => {
+    evt.preventDefault();
+    console.log(this.state);
+    axios
+      .delete(
+        `https://makeupinfo.herokuapp.com/product/${this.state._id}`,
+        this.state
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .then((err) => {
+        console.log(err);
+      });
   };
   handleAdd = (evt) => {
     evt.preventDefault();
@@ -99,7 +115,11 @@ class Update extends Component {
         >
           Update Item
         </button>
-        <button type='button' className='btn btn-outline-danger'>
+        <button
+          type='button'
+          className='btn btn-outline-danger'
+          onClick={this.handleDelete}
+        >
           Delete Item
         </button>
       </div>
