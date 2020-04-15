@@ -30,7 +30,7 @@ class Product extends Component {
         </Col>
         <Col>
           <Link to='/'>
-            <NavItem className='nav-item'>
+            <NavItem className='nav-item nav-title'>
               <h1 className='title'>
                 Makeup <span className='bomb'>Bomb</span>
               </h1>
