@@ -9,30 +9,32 @@ class Product extends Component {
     this.state = {
       data: [],
       productTypeArray: [],
-      filteredProductTypeArray: []
+      filteredProductTypeArray: [],
     };
   }
   componentDidMount() {
     fetch(url)
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         this.setState({ data: res });
       });
   }
   render() {
-    this.state.data.map(type =>
+    this.state.data.map((type) =>
       this.state.productTypeArray.push(type.productType)
     );
     let filteredProductType = [...new Set(this.state.productTypeArray)];
     return (
       <div className='links'>
-        {filteredProductType.map(item => (
-          <h1 key={item}>
-            <Link to={`/product/${item}`} className='item'>
-              {item.replace("_", " ")}
-            </Link>
-          </h1>
-        ))}
+        {filteredProductType.map((item) =>
+          item !== "" ? (
+            <h1 key={item}>
+              <Link to={`/product/${item}`} className='item'>
+                {item.replace("_", " ")}
+              </Link>
+            </h1>
+          ) : null
+        )}
       </div>
     );
   }
