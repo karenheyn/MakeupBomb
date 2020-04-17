@@ -9,28 +9,34 @@ class Brand extends Component {
     this.state = {
       data: [],
       productBrandArray: [],
-      filteredBrandArray: []
+      filteredBrandArray: [],
     };
   }
   componentDidMount() {
     fetch(url)
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         this.setState({ data: res });
       });
   }
   render() {
     console.log(this.state.data);
-    this.state.data.map(item => this.state.productBrandArray.push(item.brand));
-    let filteredProductBrand = [...new Set(this.state.productBrandArray)];
+    this.state.data.map((item) =>
+      this.state.productBrandArray.push(item.brand)
+    );
+    let filteredProductBrand = [
+      ...new Set(this.state.productBrandArray.sort()),
+    ];
     return (
       <div className='links'>
-        {filteredProductBrand.map(item => (
-          <h1 key={item}>
-            <Link to={`/brand/${item}`} className='item'>
-              {item}
-            </Link>
-          </h1>
+        {filteredProductBrand.map((item) => (
+          <div className='links-div'>
+            <h3 key={item}>
+              <Link to={`/brand/${item}`} className='item'>
+                {item}
+              </Link>
+            </h3>
+          </div>
         ))}
       </div>
     );
