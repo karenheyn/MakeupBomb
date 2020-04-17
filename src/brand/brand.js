@@ -27,17 +27,20 @@ class Brand extends Component {
     let filteredProductBrand = [
       ...new Set(this.state.productBrandArray.sort()),
     ];
+    console.log(filteredProductBrand);
     return (
       <div className='links'>
-        {filteredProductBrand.map((item) => (
-          <div className='links-div'>
-            <h3 key={item}>
-              <Link to={`/brand/${item}`} className='item'>
-                {item}
-              </Link>
-            </h3>
-          </div>
-        ))}
+        {filteredProductBrand.map((item) =>
+          item != null ? (
+            <div className='links-div' key={item}>
+              <h3>
+                <Link to={`/brand/${item}`} className='item'>
+                  {item}
+                </Link>
+              </h3>
+            </div>
+          ) : null
+        )}
       </div>
     );
   }
