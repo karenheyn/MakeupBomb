@@ -53,7 +53,9 @@ class Brands extends Component {
               </CardTitle>
               <CardSubtitle>price: ${item.price}</CardSubtitle>
               <CardSubtitle>
-                <a href={item.productLink}>Buy</a>
+                <a href={item.productLink} target='blank'>
+                  Buy
+                </a>
               </CardSubtitle>
               <br></br>
               <Button

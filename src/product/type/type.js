@@ -6,7 +6,7 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button
+  Button,
 } from "reactstrap";
 import "../../brand/brands/brands.css";
 const baseurl = "https://makeupinfo.herokuapp.com/product/type/";
@@ -16,7 +16,7 @@ class Type extends Component {
     super(props);
     this.state = {
       data: [],
-      display: false
+      display: false,
     };
     this.toggleDescription = this.toggleDescription.bind(this);
   }
@@ -24,8 +24,8 @@ class Type extends Component {
     const type = this.props.match.params.name;
     const url = `${baseurl}${type}`;
     fetch(url)
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         this.setState({ data: res });
       });
   }
@@ -42,7 +42,7 @@ class Type extends Component {
         <h1 className='head'>
           {this.props.match.params.name.replace("_", " ")}
         </h1>
-        {this.state.data.map(item => (
+        {this.state.data.map((item) => (
           <Card key={item._id} className='card'>
             <CardImg src={item.imageLink} alt='missing image'></CardImg>
             <CardBody>
@@ -52,7 +52,9 @@ class Type extends Component {
               </CardTitle>
               <CardSubtitle>price: ${item.price}</CardSubtitle>
               <CardSubtitle>
-                <a href={item.productLink}>Buy</a>
+                <a href={item.productLink} target='blank'>
+                  Buy
+                </a>
               </CardSubtitle>
               <br></br>
               <Button
