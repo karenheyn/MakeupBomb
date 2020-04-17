@@ -29,11 +29,13 @@ class Product extends Component {
       <div className='links'>
         {filteredProductType.map((item) =>
           item !== "" ? (
-            <h1 key={item}>
-              <Link to={`/product/${item}`} className='item'>
-                {item.replace("_", " ")}
-              </Link>
-            </h1>
+            <div className='product-type-div'>
+              <h1 key={item}>
+                <Link to={`/product/${item}`} className='item'>
+                  {item.replace("_", " ")}
+                </Link>
+              </h1>
+            </div>
           ) : undefined
         )}
       </div>

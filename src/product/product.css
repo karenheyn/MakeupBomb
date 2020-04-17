@@ -1,16 +1,26 @@
 .links {
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: 60px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 80%;
+}
+
+.product-type-div {
+    width: 150px;
+    height: 150px;
+    background: rgb(255, 106, 95);
+    margin-top: 5px;
+    /* line-height: 20; */
+    margin: 15px;
 }
 
 .item {
-    color: brown;
-    margin: 15px;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 4.5;
 }
 
 .item:hover {
