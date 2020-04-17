@@ -5,6 +5,11 @@
 
 }
 
+.card-img {
+    overflow: hidden;
+    height: 252px;
+}
+
 .item-container {
     text-align: center;
     display: flex;
