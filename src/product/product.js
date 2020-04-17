@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./product.css";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const url = "https://makeupinfo.herokuapp.com/product";
 
 class Product extends Component {
@@ -29,8 +29,8 @@ class Product extends Component {
       <div className='links'>
         {filteredProductType.map((item) =>
           item !== "" ? (
-            <div className='product-type-div'>
-              <h1 key={item}>
+            <div className='product-type-div' key={item}>
+              <h1>
                 <Link to={`/product/${item}`} className='item'>
                   {item.replace("_", " ")}
                 </Link>

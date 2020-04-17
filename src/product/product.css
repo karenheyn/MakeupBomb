@@ -10,20 +10,25 @@
 .product-type-div {
     width: 150px;
     height: 150px;
-    background: rgb(255, 106, 95);
+    background: rgba(255, 106, 95, 0.906);
     margin-top: 5px;
     /* line-height: 20; */
     margin: 15px;
+    box-shadow: 1px 3px 10px #aaa;
 }
 
 .item {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
-    line-height: 4.5;
+    line-height: 5.5;
 }
 
 .item:hover {
-    color: palevioletred;
     text-decoration: none;
+    color: black;
+}
+
+.product-type-div:hover {
+    scale: 1.3
 }
