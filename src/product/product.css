@@ -2,20 +2,17 @@
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .item {
     color: brown;
+    margin: 15px;
 }
 
 .item:hover {
     color: palevioletred;
     text-decoration: none;
-}
-
-
-form {
-    display: block;
-    width: 60vw;
-    margin: 10px;
 }
