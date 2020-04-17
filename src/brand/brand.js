@@ -32,13 +32,11 @@ class Brand extends Component {
       <div className='links'>
         {filteredProductBrand.map((item) =>
           item !== null && item !== "" ? (
-            <div className='product-type-div' key={item}>
-              <h3>
-                <Link to={`/brand/${item}`} className='item'>
-                  {item}
-                </Link>
-              </h3>
-            </div>
+            <Link to={`/brand/${item}`}>
+              <div className='product-type-div' key={item}>
+                <h3 className='item'>{item}</h3>
+              </div>
+            </Link>
           ) : (
             false
           )
