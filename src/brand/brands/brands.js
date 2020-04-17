@@ -5,7 +5,7 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button
+  Button,
 } from "reactstrap";
 import Description from "./description";
 import "./brands.css";
@@ -16,7 +16,7 @@ class Brands extends Component {
     super(props);
     this.state = {
       data: [],
-      display: false
+      display: false,
     };
     this.toggleDescription = this.toggleDescription.bind(this);
   }
@@ -24,8 +24,8 @@ class Brands extends Component {
     const type = this.props.match.params.name;
     const url = `${baseurl}${type}`;
     fetch(url)
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         this.setState({ data: res });
       });
   }
@@ -40,10 +40,10 @@ class Brands extends Component {
     console.log(this.state.data);
     return (
       <div className='item-container'>
-        <h1 className='head'>
+        {/* <h1 className='head'>
           {this.props.match.params.name.replace("_", " ")}
-        </h1>
-        {this.state.data.map(item => (
+        </h1> */}
+        {this.state.data.map((item) => (
           <Card key={item._id} className='card'>
             <CardImg src={item.imageLink} alt='missing image'></CardImg>
             <CardBody>
