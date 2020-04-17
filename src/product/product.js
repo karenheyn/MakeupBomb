@@ -24,6 +24,7 @@ class Product extends Component {
       this.state.productTypeArray.push(type.productType)
     );
     let filteredProductType = [...new Set(this.state.productTypeArray)];
+    console.log(filteredProductType);
     return (
       <div className='links'>
         {filteredProductType.map((item) =>
@@ -33,7 +34,7 @@ class Product extends Component {
                 {item.replace("_", " ")}
               </Link>
             </h1>
-          ) : null
+          ) : undefined
         )}
       </div>
     );
