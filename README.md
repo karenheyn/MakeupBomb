@@ -1,6 +1,6 @@
 # Under Reconstruction V.2 coming soon!
 
-this website is currently under reconstruction for UI improvement. 
+this app is currently under reconstruction for UI improvements and increased performance. 
 
 
 
