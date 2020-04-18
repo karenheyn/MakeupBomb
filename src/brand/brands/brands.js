@@ -49,10 +49,12 @@ class Brands extends Component {
             <div className='image-div'>
               <CardImg src={item.imageLink} alt='missing image'></CardImg>
             </div>
+            <span className='item-id'> {"#" + item._id}</span>
+            <p className='name'>{item.name}</p>
             {/* <CardBody>
               <CardTitle>
                 {item.name}
-                <span> {item._id}</span>
+                
               </CardTitle>
               <CardSubtitle>price: ${item.price}</CardSubtitle>
               <CardSubtitle>

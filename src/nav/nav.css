@@ -15,6 +15,7 @@
     color: rgb(255, 106, 95);
     text-align: center;
     text-shadow: -1px 1px #ccc;
+    font-weight: 600;
 }
 
 .nav-item:hover {
