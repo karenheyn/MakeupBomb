@@ -1,3 +1,11 @@
+# Under Reconstruction V.2 coming soon!
+
+this app is currently under reconstruction for UI improvements and increased performance. 
+
+
+
+
+
 # MakeupBomb
 
 This full-stack MERN application is a place for makeup lovers to share information about products. This application has full CRUD capabiity. Users can add / view / edit / and delete products through the interface.
