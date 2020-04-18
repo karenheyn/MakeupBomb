@@ -45,7 +45,7 @@ class Brands extends Component {
           {this.props.match.params.name.replace("_", " ")}
         </h1> */}
         {this.state.data.map((item) => (
-          <div key={item._id} className='card'>
+          <div key={item._id} className='ca'>
             <div className='image-div'>
               <CardImg src={item.imageLink} alt='missing image'></CardImg>
             </div>
