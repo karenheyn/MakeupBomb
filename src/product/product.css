@@ -11,14 +11,13 @@
     width: 150px;
     height: 150px;
     display: flex;
-    background: rgba(255, 106, 95, 0.906);
+    border-radius: 75px;
+    background: rgba(0, 191, 140, 0.906);
     margin-top: 5px;
     margin: 15px;
     box-shadow: 1px 3px 10px #aaa;
     transition: 300ms ease-in-out;
     align-items: center;
-
-
 }
 
 .item {

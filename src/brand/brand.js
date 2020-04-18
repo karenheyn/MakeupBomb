@@ -28,12 +28,22 @@ class Brand extends Component {
       ...new Set(this.state.productBrandArray.sort()),
     ];
     console.log(filteredProductBrand);
+    const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+    const len = colors.length;
+    const random = Math.floor(Math.random(colors) * len);
+
     return (
       <div className='links'>
-        {filteredProductBrand.map((item) =>
+        {filteredProductBrand.map((item, i) =>
           item !== null && item !== "" ? (
             <Link to={`/brand/${item}`}>
-              <div className='product-type-div' key={item}>
+              <div
+                style={{
+                  background: colors[Math.floor(Math.random(colors) * len)],
+                }}
+                className='product-type-div'
+                key={item}
+              >
                 <h3 className='item'>{item}</h3>
               </div>
             </Link>

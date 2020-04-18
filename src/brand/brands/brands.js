@@ -36,6 +36,7 @@ class Brands extends Component {
       this.setState({ display: false });
     }
   }
+
   render() {
     console.log(this.state.data);
     return (
