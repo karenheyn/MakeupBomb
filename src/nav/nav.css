@@ -12,14 +12,14 @@
 }
 
 .nav-item {
-    color: rgb(255, 106, 95);
+    color: #FF87AB;
     text-align: center;
-    text-shadow: -1px 1px #ccc;
+    /* text-shadow: -1px 1px #ccc; */
     font-weight: 600;
 }
 
 .nav-item:hover {
-    color: rgb(218, 100, 79);
+    color: rgb(216, 115, 146);
 }
 
 a {

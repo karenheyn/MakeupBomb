@@ -46,7 +46,7 @@ class Brands extends Component {
         </h1> */}
         {this.state.data.map((item) => (
           <div key={item._id} className='ca'>
-            <div className='image-div'>
+            <div className='product-image-div'>
               <CardImg src={item.imageLink} alt='missing image'></CardImg>
             </div>
             <span className='item-id'> {"#" + item._id}</span>
