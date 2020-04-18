@@ -28,7 +28,21 @@ class Brand extends Component {
       ...new Set(this.state.productBrandArray.sort()),
     ];
     console.log(filteredProductBrand);
-    const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+    const colors = [
+      "#0088FE",
+      "#00C49F",
+      "#FFBB28",
+      "#FF8042",
+      "#383961",
+      "rgb(255, 106, 95)",
+      "#5C2751",
+      "#6457A6",
+      "#CF8BA3",
+      "#FF87AB",
+      "#60B2E5",
+      "#ED6A5E",
+      "#72195A",
+    ];
     const len = colors.length;
     const random = Math.floor(Math.random(colors) * len);
 
