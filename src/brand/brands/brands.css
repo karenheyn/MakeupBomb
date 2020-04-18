@@ -1,19 +1,36 @@
 .card {
-    width: 210px;
-    margin: 0 auto;
     font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
 
 }
 
-.card-img {
+.image-div {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    height: 220px;
 }
+
+.image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+    padding: 0;
+
+}
+
 
 .item-container {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1.1fr);
+    grid-auto-rows: 300px 300px;
+    grid-gap: 10px;
+}
+
+.card-body {
+    padding: 0;
 }
 
 .head {

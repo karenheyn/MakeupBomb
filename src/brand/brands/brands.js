@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import {
-  Card,
+  // Card,
   CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
+  // CardBody,
+  // CardTitle,
+  // CardSubtitle,
+  // Button,
 } from "reactstrap";
 import Description from "./description";
 import "./brands.css";
@@ -45,9 +45,11 @@ class Brands extends Component {
           {this.props.match.params.name.replace("_", " ")}
         </h1> */}
         {this.state.data.map((item) => (
-          <Card key={item._id} className='card'>
-            <CardImg src={item.imageLink} alt='missing image'></CardImg>
-            <CardBody>
+          <div key={item._id} className='card'>
+            <div className='image-div'>
+              <CardImg src={item.imageLink} alt='missing image'></CardImg>
+            </div>
+            {/* <CardBody>
               <CardTitle>
                 {item.name}
                 <span> {item._id}</span>
@@ -72,8 +74,8 @@ class Brands extends Component {
                   display={this.state.display}
                 ></Description>
               </div>
-            </CardBody>
-          </Card>
+            </CardBody> */}
+          </div>
         ))}
       </div>
     );
