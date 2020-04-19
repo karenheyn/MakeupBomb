@@ -12,9 +12,9 @@
 }
 
 .nav-item {
-    color: #FF87AB;
+    color: #808080;
     text-align: center;
-    /* text-shadow: -1px 1px #ccc; */
+    /* text-shadow: -.5px .5px #ccc; */
     font-weight: 600;
 }
 
